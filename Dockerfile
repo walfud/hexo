@@ -6,7 +6,7 @@ RUN npm install hexo-cli -g
 
 #
 EXPOSE 4000
-CMD cd / && 
+CMD cd / && \
     hexo init blog && \
     cd blog && \
     npm install && \
