@@ -5,6 +5,9 @@ MAINTAINER walfud "walfud@aliyun.com"
 RUN npm install hexo-cli -g
 
 #
-WORKDIR /blog
 EXPOSE 4000
-CMD ["hexo", "help"]
+CMD cd / && 
+    hexo init blog && \
+    cd blog && \
+    npm install && \
+    hexo server
